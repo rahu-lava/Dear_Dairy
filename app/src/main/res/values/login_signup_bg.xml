@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="LoginSignupBackground">
+    <item name="android:background">@drawable/android_background_img</item>
+</style>
+</resources>

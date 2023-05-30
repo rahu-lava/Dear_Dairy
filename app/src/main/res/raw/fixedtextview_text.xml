@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="button_text_1">Write about today</string>
+    <string name="button_text_2">Record your day</string>
+    <string name="button_text_3">Share your thoughts</string>
+    <string name="button_text_4">Journal your experiences</string>
+    <string name="button_text_5">Capture today's moments</string>
+    <string name="button_text_6">Document your day</string>
+    <string name="button_text_7">Write in your diary</string>
+    <string name="button_text_8">Reflect on today</string>
+    <string name="button_text_9">Remember your day</string>
+    <string name="button_text_10">Write down your memories</string>
+    <string name="button_text_11">Diary Time</string>
+    <string name="button_text_12">Today's Entry</string>
+    <string name="button_text_13">Journal Prompt</string>
+    <string name="button_text_14">Express Yourself</string>
+    <string name="button_text_15">My Daily Story</string>
+    <string name="button_text_16">Share Your Day</string>
+    <string name="button_text_17">Memoirs of Today</string>
+    <string name="button_text_18">Thoughts &amp; Feelings</string>
+    <string name="button_text_19">Write Your Narrative</string>
+    <string name="button_text_20">Personal Reflection</string>
+    <string name="button_text_21">Write Your Story</string>
+    <string name="button_text_22">Daily Diary Entry</string>
+    <string name="button_text_23">Chronicle Your Day</string>
+    <string name="button_text_24">Thoughts from Today</string>
+    <string name="button_text_25">Today's Reflection</string>
+    <string name="button_text_26">Unleash Your Thoughts</string>
+    <string name="button_text_27">Capture the Moment</string>
+    <string name="button_text_28">Your Daily Journal</string>
+    <string name="button_text_29">Share Your Experiences</string>
+    <string name="button_text_30">Document Your Journey</string>
+</resources>

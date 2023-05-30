@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/title_dailog_border_draw"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Title :"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/titleTextInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#F4F4F4"
+        android:hint="Give Title To Your Page"
+        android:inputType="text"
+        android:maxLength="22"
+        android:padding="15dp"
+        android:required="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+    <TextView
+        android:id="@+id/emojiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:text="Select Emoji Expressing Your Day :"
+        android:textColor="@color/black"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextInput" />
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:background="#F4F4F4"
+        android:contentDescription="scrollable content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emojiTextView">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView1"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/thinking_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji"  />
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView5"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView6"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView8"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView9"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji"  />
+
+                <ImageView
+                    android:id="@+id/imageView10"
+                    style="@style/TitleDialogStyle"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView11"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView12"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji"  />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/imageView13"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+
+                <ImageView
+                    android:id="@+id/imageView14"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji"  />
+
+                <ImageView
+                    android:id="@+id/imageView15"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji"  />
+
+                <ImageView
+                    android:id="@+id/imageView16"
+                    android:background="@drawable/title_dialog_emoji_draw"
+                    style="@style/TitleDialogStyle"
+                    android:src="@drawable/smiling_face_emoji" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout6"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_margin="10dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scrollView4">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="You Selected :"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView17"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="visible"
+            android:src="@drawable/thinking_emoji" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#3CBC2D"
+        android:text="Save"
+        android:textColor="#263238"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout6" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
