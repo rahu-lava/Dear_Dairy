@@ -8,14 +8,16 @@ import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import java.text.SimpleDateFormat
+import java.util.*
 
 class LandingPage:AppCompatActivity() {
-    private lateinit var sharedPreferences:SharedPreferences
+    private lateinit var sharedPreferences: SharedPreferences
     private lateinit var selectedImageResource: String
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.landing_page)
-
 
         val greetET = findViewById<TextView>(R.id.greetingTextView)
         val username = intent.getStringExtra("data")
@@ -58,16 +60,94 @@ class LandingPage:AppCompatActivity() {
                 }
             }
             buttonSave.setOnClickListener {
-
+                saveSelectedImageResource(selectedImageResource)
+                saveTitleForDay(titleInput.text.toString())
                 val intent = Intent(this, DairyPage::class.java)
                 startActivity(intent)
             }
             dialog.show()
         }
     }
-    private fun getGreetingText() : String{
+
+    private fun getGreetingText() : String {
         sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
         val username = sharedPreferences.getString("username", "Dairy")
         return getString(R.string.greeting_text, username)
+    }
+
+    private fun saveSelectedImageResource(resource: String) {
+        sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // Remove the image resource name for the seventh day (day 7)
+        if (sharedPreferences.contains("day7image")) {
+            editor.remove("day7image")
+        }
+
+        // Shift the image resource name for the previous days
+        for (i in 6 downTo 1) {
+            val previousDayKey = "day$i"
+            val nextDayKey = "day${i + 1}"
+            val previousDayImageResource = sharedPreferences.getString(previousDayKey + "image", null)
+
+            if (previousDayImageResource != null) {
+                editor.putString(nextDayKey + "image", previousDayImageResource)
+            }
+        }
+
+        // Save the image resource name for the first day (day 1)
+        editor.putString("day1image", resource)
+
+        editor.apply()
+    }
+
+    private fun saveTitleForDay(title: String) {
+        sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        // Remove the title for the seventh day (day 7)
+        if (sharedPreferences.contains("day7title")) {
+            editor.remove("day7title")
+        }
+
+        // Shift the titles for the previous days
+        for (i in 6 downTo 1) {
+            val previousDayKey = "day$i"
+            val nextDayKey = "day${i + 1}"
+            val previousDayTitle = sharedPreferences.getString(previousDayKey + "title", null)
+
+            if (previousDayTitle != null) {
+                editor.putString(nextDayKey + "title", previousDayTitle)
+            }
+        }
+
+        // Save the title for the first day (day 1)
+        editor.putString("day1title", title)
+
+        editor.apply()
+    }
+
+    private fun getCurrentDate(): String {
+        val currentDate = Calendar.getInstance().time
+        val dateFormat = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault())
+        return dateFormat.format(currentDate)
+    }
+
+    private fun saveCurrentDateForDay(day: Int) {
+        val sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val editor = sharedPreferences.edit()
+
+        val dayKey = "day$day"
+        val currentDateKey = dayKey + "date"
+        val currentDate = getCurrentDate()
+
+        editor.putString(currentDateKey, currentDate)
+        editor.apply()
+    }
+
+    private fun getCurrentDateForDay(day: Int): String? {
+        val sharedPreferences = getSharedPreferences("MyAppPreferences", MODE_PRIVATE)
+        val currentDateKey = "day$day" + "date"
+        return sharedPreferences.getString(currentDateKey, null)
     }
 }
