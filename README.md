@@ -1,6 +1,6 @@
-# My Project
+# Project Gallery
 
-Here are some images resized using HTML:
+
 <img src="https://github.com/rahu-lava/Dear_Dairy/assets/113875289/574a4bd3-23a3-4593-8d0b-cd4a2d269399" alt="IMG-20240530-WA0010" width="300" />
 
 <img src="https://github.com/rahu-lava/Dear_Dairy/assets/113875289/f0403e33-cc79-4f6b-ae41-0fdf95be6c36" alt="IMG-20240530-WA0012" width="300" />
